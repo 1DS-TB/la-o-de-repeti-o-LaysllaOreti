@@ -1,22 +1,11 @@
-def encontrar_divisores(n):
-    divisores = []
-    for i in range(1, n):
-        if n % i == 0:
-            divisores.append(i)
-    return divisores
+soma = 0
 
-def numero_perfeito(n):
-    divisores = encontrar_divisores(n)
-    return sum(divisores) == n
+for num in range(1,10001):
 
-def encontrar_numeros_perfeitos(limite):
-    perfeitos = []
-    for i in range(1, limite + 1):
-        if numero_perfeito(i):
-            perfeitos.append(i)
-    return perfeitos
+    for i in range(1,num):
+        if num % i == 0:
+            soma += i
+    if soma == num:
+        print(f"O número {num} é perfeito")
 
-# Encontrar números perfeitos entre 1 e 10000
-limite = 10000
-numeros_perfeitos = encontrar_numeros_perfeitos(limite)
-print(f"Números perfeitos entre 1 e {limite}: {numeros_perfeitos}")
+    soma -= soma
