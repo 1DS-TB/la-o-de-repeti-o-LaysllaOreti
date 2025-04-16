@@ -1,16 +1,11 @@
-N = int(input("Digite um número inteiro positivo: "))
-
-#Saber sse o número é positivo
-while N <= 0:
-    N = int(input("Por favor, insira um número inteiro que seja positivo: "))
-
+numero = int(input("Por favor, insira um número inteiro positivo: "))
 soma = 0
-contador = 1
 
-#Laço para somar os números de 1 até N
-while contador <= N:
-    soma += contador
-    contador += 1
-
-#Exibir o resultado
-print(f"A soma de 1 até {N} é: {soma}")
+if numero < 0:
+    print("INVALIDO")
+else:
+    numero += 1
+    while numero > 1:
+        numero -= 1
+        soma+= numero
+print(soma)
