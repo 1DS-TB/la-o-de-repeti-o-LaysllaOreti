@@ -1,10 +1,14 @@
-def soma_harmonica(N): #definir a função de soma de série harmônica
-    soma = 0 #inicializando a variável agregando valor 0
-    for i in range(1, N+1):   #vai percorrer todos os valores de i de 1 até N
-        soma += 1/i   #a cada iteração, é adicionado à variável soma
-    return round(soma, 2)   #round é a operação de arredondamente do resultado
-
-# Exemplo de uso
-N = int(input("Digite o valor de N: "))
-resultado = soma_harmonica(N)
-print(f"A soma da série harmônica até {N} termos é: {resultado}")
+divisor = int(input("Insira o número: "))
+n = 1
+serie_harmonica = []
+soma = 0
+if divisor < 0:
+    print("INVALIDO")
+else:
+    while n <= divisor:
+        serie_harmonica.append(f"1/{n}")
+        serie = 1/n
+        n +=1
+        soma += serie
+    print(serie_harmonica)
+    print(f"A soma da série harmônica é igual a: {soma:.2f}")
