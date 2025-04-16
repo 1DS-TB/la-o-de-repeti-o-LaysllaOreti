@@ -1,10 +1,13 @@
-numero = int(input("Digite um número: "))
-divisores = 0
+numb = int(input("Digite um número: "))
+divisor = 0
 
-for i in range(1, numero + 1):    
-    if numero % i == 0:        
-        divisores += 1
-if divisores == 2:    
-    print("É primo")
-else:    
-    print("Não é primo")
+for i in range(1, num +1):
+    if numb % i == 0 and num >= 1:
+        divisor +=1
+
+if divisor == 2:
+    print(f"{numb} eh primo")
+elif divisor <1:
+    print("INVALIDO")
+else:
+    print(f"{numb} nao eh primo")
