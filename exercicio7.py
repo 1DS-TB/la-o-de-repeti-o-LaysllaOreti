@@ -1,7 +1,9 @@
-N = int(input("Digite um número N: "))
+Numero = int(input("Insira um número: "))
 
-for i in range(1, N + 1):
-    
-    for j in range(i):
-        print("*", end="")
-    print()  #Quebrar a linha após os asteriscos
+if Numero <1:
+    print("INVALIDO")
+else:
+    for linha in range(1, Numero+1): 
+        for cada in range (linha): 
+            print("x ", end=" ")
+        print(" ") 
