@@ -1,10 +1,14 @@
-numero = int(input("Digite um número: "))
+numero = int(input("Insira o número que deseja calcular: "))
+i = 1
+nm = 1
 
-resultado = 1
-contador = 1
-
-while contador <= numero:
-    resultado *= contador
-    contador += 1
+if numero > 0:
+    while i <= numero:
+        nm *= i
+        i+=1
+elif numero < 0:
+    print("INVALIDO")
     
-print(f"O fatorial do número é: {resultado}")
+elif numero == 0:
+    nm == 1
+print(nm)
